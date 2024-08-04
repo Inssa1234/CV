@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Grey+Qo&family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Grey+Qo&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Grey+Qo&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-  h1 {
-    overflow: hidden;
-  }
   font-family: "PT Serif", serif;
   font-weight: 400;
   font-style: normal;
@@ -16,25 +14,34 @@
   text-align: center;
 }
 
-body {
-  width: 100vw !important;
+* h1 {
+  overflow: hidden;
 }
 
-header {
+body {
+  width: 100vw !important;
+  min-height: 100vh;
+  position: relative;
+}
+
+.head {
   background: transparent;
   position: fixed;
   width: 100vw !important;
-  a{
-    font-family: "PT Serif", serif;
-    font-weight: 400;
-    font-style: normal;
-  }z-index: 100;
+  z-index: 10 !important;
+}
+
+.head a {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .header {
-  background: transparent;
   box-shadow: -1px 3px 20px #00000080;
-  backdrop-filter: blur(3px);
+  position: fixed;
+  width: 100vw !important;
+  z-index: 10 !important;
 }
 
 #accueil {
@@ -46,46 +53,58 @@ header {
   background: url(./laptop-3214756_1920.png) center/cover no-repeat;
   width: 100vw !important;
 
-  h1 {
-    font-family: "Grey Qo", cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20vw;
-    padding: 0 40px;
-    color: black;
-    text-shadow: 7px 7px 16px #000000db;
-  }p{
-    font-family: "PT Serif", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
-  }
 }
+
+#accueil h1 {
+  font-family: "Grey Qo", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20vw;
+  padding: 0 40px;
+  color: black;
+  text-shadow: 7px 7px 16px #000000db;
+}
+
+#accueil p {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+
 .info {
   min-height: 100vh;
   background: #100f0f center/cover no-repeat;
   padding: 20px 0;
-  p{
-    color: white;
-  }
-}footer{
-  h1{
-    letter-spacing: 20px;
-  }
-}@keyframes a1 {
+
+}
+
+.info p {
+  color: white;
+}
+
+footer h1 {
+  letter-spacing: 20px;
+}
+
+@keyframes a1 {
   from {
     transform: translateY(0);
     transition: 0.4s ease;
   }
-  50%{
+
+  50% {
     scale: 0.1;
   }
+
   to {
     transform: translateY(100px);
     scale: 1;
   }
 
-}.arrow{
+}
+
+.arrow {
   overflow: hidden;
   position: absolute;
   display: flex;
@@ -93,15 +112,19 @@ header {
   justify-content: center;
   height: 50%;
   bottom: 0;
-}.btn1{
+}
+
+.btn1 {
   animation: a1 5s infinite alternate;
   animation-delay: 2s;
   animation-timing-function: ease-in-out;
   overflow: hidden;
 }
+
 .cv-section {
   margin-bottom: 20px;
 }
+
 .cv-section h2 {
   color: #007bff;
   border-bottom: 2px solid #2e343a;
@@ -111,6 +134,7 @@ header {
   font-weight: 600;
   font-style: normal;
 }
+
 .cv-skills li {
   background: #007bff;
   color: #fff;
@@ -118,6 +142,10 @@ header {
   padding: 5px 10px;
   margin: 5px 5px 0 0;
   border-radius: 5px;
+}
+.container-fluid {
+  width: 100vw !important;
+  margin: 0;
 }
 @media screen and (min-width: 790px) {
   .right-phone {
@@ -128,6 +156,7 @@ header {
 @media screen and (max-width: 790px) {
   .right-phone {
     display: block !important;
+
   }
 
   .pc {
@@ -142,14 +171,14 @@ header {
     position: fixed;
     background: rgba(0, 0, 0, 0.411);
     backdrop-filter: blur(3px);
-    height: 100vh;
-    z-index: 102;
+    z-index: 200 !important;
     right: -100%;
     top: 0;
     transition: 1s ease;
     width: 60vw;
     display: flex;
     justify-content: flex-start;
+    height: 100vh;
   }
 
   .right-phone input:checked~.menu {
