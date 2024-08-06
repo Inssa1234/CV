@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Grey+Qo&family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Grey+Qo&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Grey+Qo&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&display=swap');
@@ -52,6 +53,7 @@ body {
   flex-direction: column;
   background: url(./laptop-3214756_1920.png) center/cover no-repeat;
   width: 100vw !important;
+  position: relative;
 
 }
 
@@ -106,7 +108,7 @@ footer h1 {
 
 .arrow {
   overflow: hidden;
-  position: fixed;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
